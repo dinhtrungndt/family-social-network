@@ -1,8 +1,9 @@
+import HomePage from './pages/Home';
 
 function App() {
   return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center">
-      <h1></h1>
+    <div>
+      <HomePage />
     </div>
   );
 }
