@@ -1,18 +1,42 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BiPhotoAlbum } from 'react-icons/bi';
 import { FaAngleDown, FaFacebookMessenger, FaHome } from 'react-icons/fa';
 import { IoNotificationsSharp } from 'react-icons/io5';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { IMAGE } from '../../constants/image/IMAGE.js';
 
+import ChatHeader from './chat/index.js';
+import NotificationsHeader from './notifications/index.js';
 import Search from './search.js';
 
 const Header = () => {
   const [activeTab, setActiveTab] = useState('HOME');
+  const [activeChat, setActiveChat] = useState(false);
+  const [activeNotifications, setActiveNotifications] = useState(false);
+  const messengerRef = useRef(null);
+  const notificationsRef = useRef(null);
 
   const handleClickTab = tab => {
     setActiveTab(tab);
   };
+
+  useEffect(() => {
+    const handleClickOutside = event => {
+      if (messengerRef.current && !messengerRef.current.contains(event.target)) {
+        setActiveChat(false);
+      }
+
+      if (notificationsRef.current && !notificationsRef.current.contains(event.target)) {
+        setActiveNotifications(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="flex items-center justify-between p-2 px-4 bg-gray-100 shadow-md">
@@ -31,9 +55,21 @@ const Header = () => {
           <MdOutlineSupervisorAccount size={24} className={`${activeTab === 'ACCOUNT' ? 'text-blue-500' : 'text-gray-500'}`} />
         </div>
       </div>
-      <div className="flex items-center space-x-4">
-        <FaFacebookMessenger className="text-black text-4xl cursor-pointer bg-gray-300 rounded-full p-2" />
-        <IoNotificationsSharp className="text-black text-4xl cursor-pointer bg-gray-300 rounded-full p-2" />
+      <div className="flex items-center space-x-2">
+        <div ref={messengerRef} className="relative">
+          <FaFacebookMessenger
+            className="text-black text-4xl cursor-pointer bg-gray-300 rounded-full p-2"
+            onClick={() => setActiveChat(prev => !prev)}
+          />
+          {activeChat && <ChatHeader onClose={() => setActiveChat(false)} />}
+        </div>
+        <div ref={notificationsRef} className="relative">
+          <IoNotificationsSharp
+            className="text-black text-4xl cursor-pointer bg-gray-300 rounded-full p-2"
+            onClick={() => setActiveNotifications(prev => !prev)}
+          />
+          {activeNotifications && <NotificationsHeader onClose={() => setActiveNotifications(false)} />}
+        </div>
         {/* Account */}
         <div className="relative cursor-pointer">
           <img src={IMAGE.LOGO} alt="Avatar" className="w-10 h-10" />
@@ -41,6 +77,7 @@ const Header = () => {
           <FaAngleDown className="absolute bottom-0 right-0 w-4 h-4 bg-gray-200 rounded-full border-2 border-white" size={20} />
         </div>
       </div>
+
     </div>
   );
 };
