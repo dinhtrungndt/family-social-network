@@ -321,7 +321,7 @@ const RightSidebar = ({ onClose, onImageClick }) => {
             {activeConversation.avatar ? (
               <img src={`${process.env.REACT_APP_SOCKET_URL}${activeConversation.avatar}`} alt="Avatar" className="w-20 h-20 rounded-full object-cover shadow-md mb-3" />
             ) : (
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white text-3xl font-bold shadow-md mb-3">
+              <div className="w-20 h-20 rounded-full bg-indigo-600 flex items-center justify-center text-white text-3xl font-bold shadow-md mb-3">
                 {activeConversation.name?.charAt(0).toUpperCase()}
               </div>
             )}

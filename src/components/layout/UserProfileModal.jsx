@@ -37,7 +37,7 @@ const UserProfileModal = ({ isOpen, onClose, userId }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Cover Photo */}
-        <div className="h-32 bg-gradient-to-r from-indigo-500 to-purple-600 relative">
+        <div className="h-32 bg-indigo-600 relative">
           <button 
             onClick={onClose}
             className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-black/20 hover:bg-black/40 text-white transition-colors"
@@ -61,7 +61,7 @@ const UserProfileModal = ({ isOpen, onClose, userId }) => {
                 className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-slate-900 shadow-md bg-white dark:bg-slate-800"
               />
             ) : (
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white text-3xl font-bold shadow-md border-4 border-white dark:border-slate-900">
+              <div className="w-24 h-24 rounded-full bg-indigo-600 flex items-center justify-center text-white text-3xl font-bold shadow-md border-4 border-white dark:border-slate-900">
                 {profile?.fullName?.charAt(0)?.toUpperCase() || '?'}
               </div>
             )}

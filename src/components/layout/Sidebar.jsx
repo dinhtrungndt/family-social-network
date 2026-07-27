@@ -87,7 +87,7 @@ const ConversationItem = ({
               className="w-10 h-10 rounded-full object-cover flex-shrink-0"
             />
           ) : (
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+            <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
               {item.name?.charAt(0)?.toUpperCase() || '?'}
             </div>
           )}
@@ -648,7 +648,7 @@ const Sidebar = ({ onItemClick }) => {
                   className="w-10 h-10 rounded-full object-cover shadow-sm group-hover:opacity-90"
                 />
               ) : (
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white font-bold shadow-sm group-hover:opacity-90">
+                <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold shadow-sm group-hover:opacity-90">
                   {user?.fullName?.charAt(0)?.toUpperCase()}
                 </div>
               )}

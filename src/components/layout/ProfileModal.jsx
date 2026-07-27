@@ -126,7 +126,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
                   className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-md group-hover:opacity-80 transition"
                 />
               ) : (
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white text-3xl font-bold shadow-md group-hover:opacity-80 transition border-4 border-white dark:border-slate-800">
+                <div className="w-24 h-24 rounded-full bg-indigo-600 flex items-center justify-center text-white text-3xl font-bold shadow-md group-hover:opacity-80 transition border-4 border-white dark:border-slate-800">
                   {user?.fullName?.charAt(0)?.toUpperCase()}
                 </div>
               )}

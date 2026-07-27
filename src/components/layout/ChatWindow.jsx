@@ -222,7 +222,7 @@ const MessageItem = ({
             {message.sender?.avatar ? (
               <img src={`${process.env.REACT_APP_SOCKET_URL}${message.sender.avatar}`} alt="Avatar" className={`w-7 h-7 rounded-full object-cover ${message.senderRole === 'ADMIN' ? 'border-[1.5px] border-amber-400' : (message.senderRole === 'DEPUTY' ? 'border-[1.5px] border-slate-400' : '')}`} />
             ) : (
-              <div className={`w-7 h-7 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white text-xs font-bold ${message.senderRole === 'ADMIN' ? 'border-[1.5px] border-amber-400' : (message.senderRole === 'DEPUTY' ? 'border-[1.5px] border-slate-400' : '')}`}>
+              <div className={`w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold ${message.senderRole === 'ADMIN' ? 'border-[1.5px] border-amber-400' : (message.senderRole === 'DEPUTY' ? 'border-[1.5px] border-slate-400' : '')}`}>
                 {message.sender?.fullName?.charAt(0) || '?'}
               </div>
             )}
@@ -545,7 +545,7 @@ const MessageItem = ({
           className={`flex items-center gap-1 mt-1 cursor-pointer hover:opacity-80 transition-opacity ${isOwn ? 'justify-end mr-1' : 'justify-start ml-1'}`}
         >
           {readers.slice(0, 3).map((reader, index) => (
-            <div key={index} className="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 border border-white flex items-center justify-center text-[7px] font-bold text-white shadow-sm" title={`Đã xem bởi ${reader.fullName}`}>
+            <div key={index} className="w-3.5 h-3.5 rounded-full bg-indigo-600 border border-white flex items-center justify-center text-[7px] font-bold text-white shadow-sm" title={`Đã xem bởi ${reader.fullName}`}>
                {reader.fullName?.charAt(0) || '?'}
             </div>
           ))}
@@ -1234,7 +1234,7 @@ const ChatWindow = ({ onOpenSidebar, onToggleRightSidebar }) => {
             {activeConversation.avatar ? (
               <img src={`${process.env.REACT_APP_SOCKET_URL}${activeConversation.avatar}`} alt="Avatar" className="w-9 h-9 rounded-full object-cover flex-shrink-0" />
             ) : (
-              <div className="w-9 h-9 flex-shrink-0 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white font-semibold text-sm">
+              <div className="w-9 h-9 flex-shrink-0 rounded-full bg-indigo-600 flex items-center justify-center text-white font-semibold text-sm">
                 {activeConversation.name?.charAt(0)?.toUpperCase() || '?'}
               </div>
             )}
@@ -1377,7 +1377,7 @@ const ChatWindow = ({ onOpenSidebar, onToggleRightSidebar }) => {
             <div className="absolute top-full left-0 right-0 z-10 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg max-h-64 overflow-y-auto">
               {pinnedMessages.map((pin) => (
                 <div key={pin.id} className="px-4 py-3 border-b border-slate-100 dark:border-slate-700 flex items-start gap-3 hover:bg-slate-50 dark:hover:bg-slate-700 transition group">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">
                     {pin.message?.sender?.fullName?.charAt(0) || '?'}
                   </div>
                   <div
@@ -1525,7 +1525,7 @@ const ChatWindow = ({ onOpenSidebar, onToggleRightSidebar }) => {
         {/* Typing indicator */}
         {typing.length > 0 && (
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex-shrink-0" />
+            <div className="w-7 h-7 rounded-full bg-indigo-600 flex-shrink-0" />
             <div className="px-4 py-2.5 rounded-2xl rounded-bl-sm msg-other flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:0ms]" />
               <span className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce [animation-delay:150ms]" />
@@ -1723,7 +1723,7 @@ const ChatWindow = ({ onOpenSidebar, onToggleRightSidebar }) => {
               <button
                 onClick={handleSend}
                 disabled={isSending}
-                className="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-600 to-sky-500 hover:from-indigo-500 hover:to-sky-400 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 transition-all duration-150"
+                className="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-xl bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 disabled:opacity-40 disabled:cursor-not-allowed active:scale-95 transition-all duration-150 shadow-sm"
                 type="button"
                 title="Gửi"
               >

@@ -183,7 +183,7 @@ const CreateGroupModal = ({ isOpen, onClose, onSuccess, initialSelectedUsers = [
                             {isSelected && <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>}
                           </div>
                           
-                          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">
+                          <div className="w-9 h-9 rounded-full bg-indigo-600 flex items-center justify-center text-white font-semibold text-sm shrink-0">
                             {u.fullName?.charAt(0)?.toUpperCase() || '?'}
                           </div>
 

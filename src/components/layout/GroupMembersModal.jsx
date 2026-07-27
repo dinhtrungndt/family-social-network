@@ -191,7 +191,7 @@ const GroupMembersModal = ({ isOpen, onClose, groupId }) => {
                 return (
                   <div key={m.userId} className="flex items-center gap-3 p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition">
                     <div className="relative">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-semibold text-sm shrink-0">
                         {m.user.fullName?.charAt(0)?.toUpperCase() || '?'}
                       </div>
                       {isOnline !== undefined && (
@@ -291,7 +291,7 @@ const GroupMembersModal = ({ isOpen, onClose, groupId }) => {
 
                     return (
                       <div key={u.id} className="flex items-center gap-3 p-2 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-sky-500 flex items-center justify-center text-white font-semibold text-sm">
+                        <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-semibold text-sm">
                           {u.fullName?.charAt(0)?.toUpperCase()}
                         </div>
                         <div className="flex-1 min-w-0">
