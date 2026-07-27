@@ -23,8 +23,8 @@ const PublicRoute = ({ children }) => {
 const SplashScreen = () => (
   <div className="flex items-center justify-center h-screen bg-gray-950">
     <div className="flex flex-col items-center gap-4">
-      <img src={IMAGE.LOGO} alt="Family Chat" className="w-16 h-16 animate-pulse" />
-      <p className="text-white/60 text-sm">Đang tải Family Chat...</p>
+      <img src={IMAGE.LOGO} alt="Mạng Xã Hội Gia Đình" className="w-16 h-16 animate-pulse" />
+      <p className="text-white/60 text-sm">Đang tải Mạng Xã Hội Gia Đình...</p>
     </div>
   </div>
 );

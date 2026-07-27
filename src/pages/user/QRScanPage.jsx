@@ -70,7 +70,7 @@ const QRScanPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900 px-4">
       <Helmet>
-        <title>Xác nhận đăng nhập | Family Chat</title>
+        <title>Xác nhận đăng nhập | Mạng Xã Hội Gia Đình</title>
       </Helmet>
 
       <div className="w-full max-w-sm glass-card p-8 relative overflow-hidden">
@@ -80,7 +80,7 @@ const QRScanPage = () => {
           <img src={IMAGE.LOGO} alt="Family" className="h-10 w-auto object-contain mx-auto mb-4" />
           <h1 className="text-xl font-bold text-slate-900 dark:text-white">Xác nhận đăng nhập</h1>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Bạn đang yêu cầu đăng nhập Family Chat trên một thiết bị khác bằng tài khoản{' '}
+            Bạn đang yêu cầu đăng nhập Mạng Xã Hội Gia Đình trên một thiết bị khác bằng tài khoản{' '}
             <b>{user?.fullName}</b>.
           </p>
         </div>

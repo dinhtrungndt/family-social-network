@@ -1,6 +1,7 @@
 {
-  "short_name": "Mạng xã hội gia đình",
-  "name": "Mạng xã hội gia đình",
+  "short_name": "Gia Đình",
+  "name": "Mạng Xã Hội Gia Đình",
+  "description": "Mạng xã hội gia đình riêng tư - Kết nối, chia sẻ khoảnh khắc và nhắn tin tức thì.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,20 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait",
+  "theme_color": "#4f46e5",
+  "background_color": "#0f172a"
 }

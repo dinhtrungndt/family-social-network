@@ -54,10 +54,10 @@ const RegisterPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6">
       <Helmet>
-        <title>Đăng ký | Family Chat</title>
+        <title>Đăng ký | Mạng Xã Hội Gia Đình</title>
         <meta
           name="description"
-          content="Tạo tài khoản Family Chat để bắt đầu nhắn tin với mọi người."
+          content="Tạo tài khoản Mạng Xã Hội Gia Đình để bắt đầu nhắn tin và chia sẻ với người thân."
         />
       </Helmet>
       <div className="w-full max-w-md glass-card p-6 sm:p-8 md:p-9">

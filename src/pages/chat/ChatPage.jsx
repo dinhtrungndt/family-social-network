@@ -75,8 +75,8 @@ const ChatPage = () => {
       onTouchEnd={handleTouchEnd}
     >
       <Helmet>
-        <title>Tin nhắn | Family Chat</title>
-        <meta name="description" content="Nhắn tin nhóm và trực tiếp tốc độ cao với Family Chat." />
+        <title>Trang chủ | Mạng Xã Hội Gia Đình</title>
+        <meta name="description" content="Mạng xã hội gia đình riêng tư - Kết nối, chia sẻ khoảnh khắc và nhắn tin tức thì." />
       </Helmet>
       <div className="flex h-full bg-transparent">
         {/* Sidebar desktop */}

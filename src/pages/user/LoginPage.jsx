@@ -84,10 +84,10 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 relative overflow-hidden">
       <Helmet>
-        <title>Đăng nhập | Family Chat</title>
+        <title>Đăng nhập | Mạng Xã Hội Gia Đình</title>
         <meta
           name="description"
-          content="Đăng nhập vào Family Chat để kết nối với bạn bè và đồng nghiệp."
+          content="Đăng nhập vào Mạng Xã Hội Gia Đình để kết nối với gia đình và người thân."
         />
       </Helmet>
 
@@ -99,7 +99,7 @@ const LoginPage = () => {
         <div className="flex flex-col items-center mb-6">
           <img src={IMAGE.LOGO} alt="Family" className="h-10 w-auto object-contain mb-4" />
           <h1 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6">
-            Đăng nhập Family Chat
+            Đăng nhập Mạng Xã Hội Gia Đình
           </h1>
 
           {/* Tab Switcher */}
@@ -173,7 +173,7 @@ const LoginPage = () => {
                 Quét mã QR để đăng nhập
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400 text-center px-4 leading-relaxed mb-6">
-                Sử dụng tính năng quét mã QR trên ứng dụng <b>Family Chat Mobile</b> để đăng nhập
+                Sử dụng tính năng quét mã QR trên ứng dụng <b>Mạng Xã Hội Gia Đình Mobile</b> để đăng nhập
                 tức thì.
               </p>
 

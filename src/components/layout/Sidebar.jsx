@@ -1185,7 +1185,7 @@ const Sidebar = ({ onItemClick }) => {
 
       {/* Footer nhỏ */}
       <div className="px-4 py-3 border-t border-slate-200/70 dark:border-slate-700/70 text-[11px] text-slate-400">
-        © {new Date().getFullYear()} Family Chat
+        © {new Date().getFullYear()} Mạng Xã Hội Gia Đình
       </div>
 
       <CreateGroupModal
