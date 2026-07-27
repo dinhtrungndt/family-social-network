@@ -4,7 +4,7 @@ import { HiDotsHorizontal } from "react-icons/hi";
 import { IoIosCreate } from "react-icons/io";
 import { IoSearchSharp } from 'react-icons/io5';
 import { MdZoomOutMap } from "react-icons/md";
-import { IMAGE } from '../../../constants/image/IMAGE.js';
+import { IMAGE } from '../../../constants/image/IMAGE';
 
 const ChatHeader = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState('ALL');

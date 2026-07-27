@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { HiDotsHorizontal } from 'react-icons/hi';
-import { IMAGE } from '../../../constants/image/IMAGE.js';
+import { IMAGE } from '../../../constants/image/IMAGE';
 
 const NotificationsHeader = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState('ALL');

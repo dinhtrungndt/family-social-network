@@ -3,11 +3,11 @@ import { BiPhotoAlbum } from 'react-icons/bi';
 import { FaAngleDown, FaFacebookMessenger, FaHome } from 'react-icons/fa';
 import { IoNotificationsSharp } from 'react-icons/io5';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
-import { IMAGE } from '../../constants/image/IMAGE.js';
+import { IMAGE } from '../../constants/image/IMAGE';
 
-import ChatHeader from './chat/index.js';
-import NotificationsHeader from './notifications/index.js';
-import Search from './search.js';
+import ChatHeader from './chat/ChatHeader';
+import NotificationsHeader from './notifications/NotificationsHeader';
+import Search from './Search';
 
 const Header = () => {
   const [activeTab, setActiveTab] = useState('HOME');
